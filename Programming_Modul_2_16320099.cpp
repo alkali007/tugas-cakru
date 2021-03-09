@@ -40,11 +40,11 @@ float pembagian (float a, float b ) //Fungsi Pembagian
 float pangkat (float a, float b ) //Fungsi Perpangkatan
 {
     int r,z;
-    if (b==0)
+    if (b==0) //Pangkat 0
     {
         z=1;
     }
-    else if (b<0)
+    else if (b<0)//Pangkat bilangan negatif
     {
        b*=-1;
     }
@@ -128,7 +128,7 @@ int main()
                 }
                 if (nop[i-1]=="**")
                 {
-                    if (simpan[i]<0)
+                    if (simpan[i]<0)//Pangkat bilangan negatif
                     {
                         float baru;
                         baru =pangkat(simpan[i-1], simpan[i]);
@@ -138,7 +138,7 @@ int main()
                         cout<<hasil;
                         cout<<"\n";
                     }
-                    else
+                    else//Pangkat bilangan positif atau 0
                     {
                         simpan[i] = pangkat(simpan[i-1], simpan[i]);
                         hasil = simpan[i];
@@ -156,7 +156,7 @@ int main()
                 cout<<"Untuk mengakhiri gunakan '='"<<".\n";
                 cout<<"Pilih operator perhitungan: ";
                 cin>>op;
-                if (op=="=")
+                if (op=="=")//Mengakhiri kalkulator sebelum maksimum attempt angka
                 {
                     hasil = simpan[i];
                     cout<<"Hasil perhitungan: ";
